@@ -1,496 +1,517 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SmartCore Software - Empowering Ideas with Smart Solutions</title>
-<style>
-/* General Styles */
-body {
-font-family: 'Segoe UI', Arial, sans-serif;
-margin: 0;
-padding: 0;
-background-color: #0e1217;
-color: #c9d1d9;
-line-height: 1.6;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCore Software - Empowering Ideas with Smart Solutions</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0e1217;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
 
-    .container {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    h1, h2, h3 {
-        color: #ffffff;
-        font-weight: 600;
-    }
+        h1, h2, h3 {
+            color: #ffffff;
+            font-weight: 600;
+        }
 
-    a {
-        color: #58a6ff;
-        text-decoration: none;
-    }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
 
-    a:hover {
-        text-decoration: underline;
-    }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    /* Header and Navigation */
-    header {
-        background-color: #161b22;
-        padding: 15px 0;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        border-bottom: 2px solid #21262d;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
+        /* Header and Navigation */
+        header {
+            background-color: #161b22;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #21262d;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
 
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .navbar .logo-container {
-        display: flex;
-        align-items: center;
-    }
+        .navbar .logo-container {
+            display: flex;
+            align-items: center;
+        }
 
-    .navbar .logo {
-        height: 40px;
-        margin-right: 15px;
-    }
+        .navbar .logo {
+            height: 40px;
+            margin-right: 15px;
+        }
 
-    .navbar .company-name {
-        font-size: 1.5em;
-        font-weight: bold;
-        color: #ffffff;
-    }
+        .navbar .company-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ffffff;
+        }
 
-    .navbar-links a {
-        margin-left: 25px;
-        font-weight: 500;
-        transition: color 0.3s ease;
-    }
+        .navbar-links a {
+            margin-left: 25px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
 
-    .navbar-links a:hover {
-        color: #58a6ff;
-        text-decoration: none;
-    }
+        .navbar-links a:hover {
+            color: #58a6ff;
+            text-decoration: none;
+        }
 
-    /* Hero Section */
-    #hero {
-        background: linear-gradient(rgba(14, 18, 23, 0.8), rgba(14, 18, 23, 0.8)), url('[https://images.unsplash.com/photo-1516110833980-cef289a75225?q=80&w=2070&auto=format&fit=crop](https://images.unsplash.com/photo-1516110833980-cef289a75225?q=80&w=2070&auto=format&fit=crop)');
-        background-size: cover;
-        background-position: center;
-        text-align: center;
-        padding: 150px 0;
-        border-bottom: 2px solid #21262d;
-    }
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(rgba(14, 18, 23, 0.8), rgba(14, 18, 23, 0.8)), url('https://images.unsplash.com/photo-1516110833980-cef289a75225?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 150px 0;
+            border-bottom: 2px solid #21262d;
+        }
 
-    #hero h1 {
-        font-size: 3.5em;
-        margin-bottom: 10px;
-    }
+        #hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+        }
 
-    #hero p {
-        font-size: 1.3em;
-        max-width: 600px;
-        margin: 0 auto;
-    }
+        #hero p {
+            font-size: 1.3em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-    /* Section Styling */
-    section {
-        padding: 80px 0;
-        text-align: center;
-    }
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+            text-align: center;
+        }
 
-    section h2 {
-        font-size: 2.5em;
-        margin-bottom: 50px;
-        color: #58a6ff;
-    }
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #58a6ff;
+        }
 
-    section p {
-        font-size: 1.1em;
-        max-width: 700px;
-        margin: 0 auto;
-    }
+        section p {
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
-    /* About Section */
-    #about {
-        background-color: #161b22;
-    }
+        /* About Section */
+        #about {
+            background-color: #161b22;
+        }
 
-    /* Expertise Section */
-    #expertise {
-        background-color: #0e1217;
-    }
+        /* Expertise Section */
+        #expertise {
+            background-color: #0e1217;
+        }
 
-    .tech-stack {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-        margin-top: 40px;
-    }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
 
-    .tech-item {
-        background-color: #161b22;
-        padding: 30px;
-        border-radius: 10px;
-        width: 250px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        .tech-item {
+            background-color: #161b22;
+            padding: 30px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    .tech-item:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-    }
+        .tech-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+        }
 
-    .tech-item h3 {
-        margin-top: 0;
-        color: #ffffff;
-    }
+        .tech-item h3 {
+            margin-top: 0;
+            color: #ffffff;
+        }
 
-    /* Founder Section */
-    #founder {
-        background-color: #161b22;
-    }
+        /* Founder Section */
+        #founder {
+            background-color: #161b22;
+        }
 
-    .founder-details {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-        margin-top: 40px;
-    }
+        .founder-details {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+        }
 
-    .founder-photo {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid #58a6ff;
-    }
+        .founder-photo {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #58a6ff;
+        }
 
-    .founder-info {
-        max-width: 500px;
-        text-align: left;
-    }
+        .founder-info {
+            max-width: 500px;
+            text-align: left;
+        }
 
-    .founder-info h3 {
-        font-size: 2em;
-        margin-bottom: 5px;
-    }
+        .founder-info h3 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
 
-    .founder-info p {
-        margin: 5px 0;
-        font-size: 1.1em;
-        max-width: none;
-    }
+        .founder-info p {
+            margin: 5px 0;
+            font-size: 1.1em;
+            max-width: none;
+        }
 
-    .social-links {
-        margin-top: 15px;
-        display: flex;
-        gap: 20px;
-    }
+        .social-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 20px;
+        }
 
-    .social-links a {
-        font-size: 1.1em;
-    }
+        .social-links a {
+            font-size: 1.1em;
+        }
 
-    /* Projects Section */
-    #projects {
-        background-color: #0e1217;
-    }
+        /* Projects Section */
+        #projects {
+            background-color: #0e1217;
+        }
 
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-    }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
 
-    .project-card {
-        background-color: #161b22;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-align: left;
-    }
+        .project-card {
+            background-color: #161b22;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
 
-    .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-    }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
 
-    .project-image-container {
-        width: 100%;
-        height: 200px;
-        overflow: hidden;
-        background-color: #21262d; /* Placeholder background */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        .project-image-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background-color: #21262d; /* Placeholder background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .project-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-    .project-info {
-        padding: 20px;
-    }
+        .project-info {
+            padding: 20px;
+        }
 
-    .project-info h3 {
-        font-size: 1.5em;
-        margin-top: 0;
-        margin-bottom: 10px;
-    }
+        .project-info h3 {
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
 
-    .project-info p {
-        font-size: 1em;
-        line-height: 1.4;
-        margin-bottom: 15px;
-        max-width: none;
-    }
+        .project-info p {
+            font-size: 1em;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            max-width: none;
+        }
 
-    .project-link {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #58a6ff;
-        color: #ffffff;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-    }
+        .project-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #58a6ff;
+            color: #ffffff;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
 
-    .project-link:hover {
-        background-color: #4a90e2;
-    }
+        .project-link:hover {
+            background-color: #4a90e2;
+        }
 
-    /* Contact Section */
-    #contact {
-        background-color: #161b22;
-    }
+        /* Contact Section */
+        #contact {
+            background-color: #161b22;
+        }
 
-    .contact-form-container {
-        background-color: #21262d;
-        padding: 40px;
-        border-radius: 10px;
-        max-width: 600px;
-        margin: 40px auto 0;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
+        .contact-form-container {
+            background-color: #21262d;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 40px auto 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
 
-    .contact-form label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 500;
-    }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
 
-    .contact-form input, .contact-form textarea {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 20px;
-        background-color: #161b22;
-        border: 1px solid #30363d;
-        border-radius: 6px;
-        color: #ffffff;
-        box-sizing: border-box;
-    }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: #ffffff;
+            box-sizing: border-box;
+        }
 
-    .contact-form textarea {
-        resize: vertical;
-    }
+        .contact-form textarea {
+            resize: vertical;
+        }
 
-    .contact-form button {
-        display: block;
-        width: 100%;
-        padding: 15px;
-        background-color: #58a6ff;
-        color: #ffffff;
-        border: none;
-        border-radius: 6px;
-        font-size: 1.1em;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
+        .contact-form button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #58a6ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-    .contact-form button:hover {
-        background-color: #4a90e2;
-    }
+        .contact-form button:hover {
+            background-color: #4a90e2;
+        }
 
-    /* Footer */
-    footer {
-        background-color: #0e1217;
-        text-align: center;
-        padding: 30px 0;
-        border-top: 2px solid #21262d;
-        font-size: 0.9em;
-        color: #8b949e;
-    }
+        /* Footer */
+        footer {
+            background-color: #0e1217;
+            text-align: center;
+            padding: 30px 0;
+            border-top: 2px solid #21262d;
+            font-size: 0.9em;
+            color: #8b949e;
+        }
 
-    footer p:first-child {
-        margin-bottom: 5px;
-    }
-</style>
+        footer p:first-child {
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <div class="container navbar">
-        <div class="logo-container">
-            <img src="Company logo.png" alt="SmartCore Software Logo" class="logo">
-            <div class="company-name">SmartCore</div>
+    <header>
+        <div class="container navbar">
+            <div class="logo-container">
+                <img src="Company logo.png" alt="SmartCore Software Logo" class="logo">
+                <div class="company-name">SmartCore</div>
+            </div>
+            <nav class="navbar-links">
+                <a href="home">Home</a>
+                <a href="#about">About</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#projects">Projects</a>
+                <a href="#founder">Founder</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-        <nav class="navbar-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#expertise">Expertise</a>
-            <a href="#projects">Projects</a>
-            <a href="#founder">Founder</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
-</header>
+    </header>
 
-<section id="hero">
-    <div class="container">
-        <h1>Empowering Ideas with Smart Solutions</h1>
-        <p>We craft innovative and scalable technology solutions for businesses and startups.</p>
-    </div>
-</section>
-
-<section id="about">
-    <div class="container">
-        <h2>About SmartCore</h2>
-        <p>At SmartCore Software, we partner with clients and startups to transform their visions into reality. We specialize in client-based projects and freelancing, delivering cutting-edge technology solutions that are not just functional, but also intelligent and scalable. Our mission is to build software that makes a real impact, helping businesses thrive in a digital world.</p>
-    </div>
-</section>
-
-<section id="expertise">
-    <div class="container">
-        <h2>Our Expertise</h2>
-        <p>Our core competencies lie in a range of advanced technologies, ensuring we can tackle any challenge.</p>
-        <div class="tech-stack">
-            <div class="tech-item">
-                <h3>Backend Development</h3>
-                <p>Building high-performance and scalable server-side applications with Node.js and JavaScript.</p>
-            </div>
-            <div class="tech-item">
-                <h3>Artificial Intelligence</h3>
-                <p>Developing intelligent systems and machine learning models to automate tasks and provide insights.</p>
-            </div>
-            <div class="tech-item">
-                <h3>Java Development</h3>
-                <p>Creating robust, secure, and cross-platform applications for enterprise-level solutions.</p>
-            </div>
+    <section id="hero">
+        <div class="container">
+            <h1 id="typing-text"></h1>
+            <p>We craft innovative and scalable technology solutions for businesses and startups.</p>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="projects">
-    <div class="container">
-        <h2>Our Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image-container">
-                    <img src="Greenarray.jpg" alt="GreenArray Project" class="project-image">
+    <section id="about">
+        <div class="container">
+            <h2>About SmartCore</h2>
+            <p>At SmartCore Software, we partner with clients and startups to transform their visions into reality. We specialize in client-based projects and freelancing, delivering cutting-edge technology solutions that are not just functional, but also intelligent and scalable. Our mission is to build software that makes a real impact, helping businesses thrive in a digital world.</p>
+        </div>
+    </section>
+
+    <section id="expertise">
+        <div class="container">
+            <h2>Our Expertise</h2>
+            <p>Our core competencies lie in a range of advanced technologies, ensuring we can tackle any challenge.</p>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <h3>Backend Development</h3>
+                    <p>Building high-performance and scalable server-side applications with Node.js and JavaScript.</p>
                 </div>
-                <div class="project-info">
-                    <h3>🌿 GreenArray: Cultivating a Greener Tomorrow 🌿</h3>
-                    <p>An all-in-one platform for plant lovers, offering a curated selection of plants, gardening tools, premium seeds, and expert care tips.</p>
-                    <a href="https://lustrous-banoffee-694ef6.netlify.app/" target="_blank" class="project-link">View Project</a>
+                <div class="tech-item">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Developing intelligent systems and machine learning models to automate tasks and provide insights.</p>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image-container">
-                    <img src="AIeevalution.jpg" alt="AI-Powered Answer Sheet Evaluation Project" class="project-image">
-                </div>
-                <div class="project-info">
-                    <h3>🚀 AI-Powered Answer Sheet Evaluation</h3>
-                    <p>An automated grading system to streamline the evaluation process with AI/ML-based grading, real-time scoring, and detailed feedback.</p>
-                    <a href="https://ai-evaluaite-1.onrender.com/" target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image-container">
-                    <img src="Recuirtement.jpg" alt="Online Recruitment System Project" class="project-image">
-                </div>
-                <div class="project-info">
-                    <h3>👨‍💻 Online Recruitment System</h3>
-                    <p>A fully functional platform built with HTML, CSS & JavaScript to simplify the hiring process for candidates and recruiters.</p>
-                    <a href="https://vinayakpandeycode.github.io/Recruitment_System/" target="_blank" class="project-link">View Project</a>
+                <div class="tech-item">
+                    <h3>Java Development</h3>
+                    <p>Creating robust, secure, and cross-platform applications for enterprise-level solutions.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="founder">
-    <div class="container">
-        <h2>Meet the Founder</h2>
-        <div class="founder-details">
-            <img src="GERMAN IAMGE.png" alt="Vinayak Pandey" class="founder-photo">
-            <div class="founder-info">
-                <h3>Vinayak Pandey</h3>
-                <p>Founder & Lead Developer</p>
-                <p>A passionate developer with a strong focus on backend systems, AI, and Java. With a vision to empower ideas through technology, Vinayak founded SmartCore Software to provide expert solutions for startups and businesses.</p>
-                <div class="social-links">
-                    <a href="[https://www.linkedin.com/in/vinayakpandeya/](https://www.linkedin.com/in/vinayakpandeya/)" target="_blank">LinkedIn</a>
-                    <a href="[https://github.com/vinayakpandeya](https://github.com/vinayakpandeya)" target="_blank">GitHub</a>
+    <section id="projects">
+        <div class="container">
+            <h2>Our Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="Greenarray.jpg" alt="GreenArray Project" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3>🌿 GreenArray: Cultivating a Greener Tomorrow 🌿</h3>
+                        <p>An all-in-one platform for plant lovers, offering a curated selection of plants, gardening tools, premium seeds, and expert care tips.</p>
+                        <a href="https://lustrous-banoffee-694ef6.netlify.app/" target="_blank" class="project-link">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="AIeevalution.jpg" alt="AI-Powered Answer Sheet Evaluation Project" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3>🚀 AI-Powered Answer Sheet Evaluation</h3>
+                        <p>An automated grading system to streamline the evaluation process with AI/ML-based grading, real-time scoring, and detailed feedback.</p>
+                        <a href="https://ai-evaluaite-1.onrender.com/" target="_blank" class="project-link">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="Recuirtement.jpg" alt="Online Recruitment System Project" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3>👨‍💻 Online Recruitment System</h3>
+                        <p>A fully functional platform built with HTML, CSS & JavaScript to simplify the hiring process for candidates and recruiters.</p>
+                        <a href="https://vinayakpandeycode.github.io/Recruitment_System/" target="_blank" class="project-link">View Project</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="contact">
-    <div class="container">
-        <h2>Get in Touch</h2>
-        <div class="contact-form-container">
-            <form class="contact-form" action="mailto:official.smartcore@gmail.com" method="post" enctype="text/plain">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
+    <section id="founder">
+        <div class="container">
+            <h2>Meet the Founder</h2>
+            <div class="founder-details">
+                <img src="GERMAN IAMGE.png" alt="Vinayak Pandey" class="founder-photo">
+                <div class="founder-info">
+                    <h3>Vinayak Pandey</h3>
+                    <p>Founder & Lead Developer</p>
+                    <p>A passionate developer with a strong focus on backend systems, AI, and Java. With a vision to empower ideas through technology, Vinayak founded SmartCore Software to provide expert solutions for startups and businesses.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/vinayakpandeya/" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/vinayakpandeya" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer>
-    <div class="container">
-        <p>Contact us: <a href="mailto:official.smartcore@gmail.com">official.smartcore@gmail.com</a></p>
-        <p>&copy; 2025 SmartCore Software. All rights reserved.</p>
-    </div>
-</footer>
+    <section id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-form-container">
+                <form class="contact-form" action="mailto:official.smartcore@gmail.com" method="post" enctype="text/plain">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
 
-<script>
-    document.querySelectorAll('a.navbar-links a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
 
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Contact us: <a href="mailto:official.smartcore@gmail.com">official.smartcore@gmail.com</a></p>
+            <p>&copy; 2025 SmartCore Software. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a.navbar-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
-</script>
+
+        // Typing effect for Hero section heading
+        const textToType = "Empowering Ideas with Smart Solutions";
+        const typingElement = document.getElementById('typing-text');
+        let charIndex = 0;
+        const typingSpeed = 70; // milliseconds per character
+
+        function typeText() {
+            if (charIndex < textToType.length) {
+                typingElement.textContent += textToType.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeText, typingSpeed);
+            }
+        }
+
+        // Start typing effect when the window loads
+        window.onload = function() {
+            typeText();
+        };
+    </script>
+</body>
+</html>
